@@ -1,0 +1,393 @@
+/* Colours used on the whole site */
+:root {
+    --green: #2f5d50;
+    --green-dark: #22443a;
+    --cream: #faf6ec;
+    --paper: #fffdf7;
+    --side: #f1ead8;
+    --brick: #b5532e;
+    --brick-dark: #94421f;
+    --line: #d9d0bb;
+    --ink: #2e2a24;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+}
+
+h1, h2, h3, h4 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- Header ---------- */
+
+.top {
+    background-color: var(--paper);
+}
+
+.masthead {
+    box-sizing: border-box;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 22px;
+    border-bottom: 1px solid var(--line);
+}
+
+.masthead img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.masthead h1 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: var(--green);
+}
+
+.masthead p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    font-style: italic;
+    color: #6b6355;
+}
+
+.navbar {
+    height: 38px;
+    display: flex;
+    background-color: var(--green);
+    padding: 0 12px;
+}
+
+.navbar a {
+    padding: 0 16px;
+    line-height: 36px;
+    color: #f3ecd8;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    background-color: var(--green-dark);
+    border-bottom-color: var(--brick);
+}
+
+.navbar a.right {
+    margin-left: auto;
+}
+
+/* ---------- Side menu (right) ---------- */
+
+.menu {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 18px 16px;
+    background-color: var(--side);
+    border-left: 1px solid var(--line);
+}
+
+.menu h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--green);
+}
+
+.menu a {
+    display: block;
+    padding: 9px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px dotted #b9ae92;
+}
+
+.menu a::before {
+    content: "› ";
+    color: var(--brick);
+}
+
+.menu a:hover {
+    color: var(--brick);
+    padding-left: 8px;
+}
+
+/* ---------- Main area ---------- */
+
+.main {
+    background-color: var(--cream);
+    padding: 20px 26px;
+}
+
+.intro {
+    max-width: 600px;
+    margin: 10px auto 18px;
+    padding: 18px 24px 22px;
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--green);
+}
+
+.intro h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: var(--green);
+}
+
+.intro p {
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: var(--brick);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--brick-dark);
+}
+
+.about {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.about h3 {
+    font-size: 17px;
+    color: var(--green);
+    padding-bottom: 6px;
+    border-bottom: 1px dashed var(--line);
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+.points {
+    margin: 12px 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.points li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+}
+
+.points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--brick);
+    font-weight: bold;
+}
+
+/* ---------- Page titles ---------- */
+
+.page-title {
+    margin: 4px 0 18px;
+    padding-bottom: 6px;
+    font-size: 22px;
+    color: var(--green);
+    border-bottom: 2px solid var(--green);
+}
+
+/* ---------- Catalogue (cards) ---------- */
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    gap: 16px;
+}
+
+.book {
+    padding: 14px 10px 14px;
+    text-align: center;
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+}
+
+.book:hover {
+    border-color: var(--green);
+}
+
+.book img {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+}
+
+.book h4 {
+    margin: 10px 0 4px;
+    font-size: 14px;
+    color: var(--green-dark);
+}
+
+.book .meta {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 12px;
+    color: #6b6355;
+}
+
+.book .price {
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--brick);
+}
+
+.book button {
+    padding: 6px 12px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #fff;
+    background-color: var(--green);
+    border: none;
+    cursor: pointer;
+}
+
+.book button:hover {
+    background-color: var(--green-dark);
+}
+
+/* ---------- Cart ---------- */
+
+.cart {
+    width: 75%;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+    background-color: var(--paper);
+}
+
+.cart th {
+    padding: 10px;
+    text-align: left;
+    color: #f3ecd8;
+    background-color: var(--green);
+}
+
+.cart td {
+    padding: 10px;
+    border-bottom: 1px solid var(--line);
+}
+
+.cart th:last-child,
+.cart td:last-child {
+    text-align: right;
+}
+
+.cart .total td {
+    font-weight: bold;
+    background-color: var(--side);
+    border-top: 2px solid var(--green);
+}
+
+.checkout {
+    width: 75%;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.checkout button {
+    padding: 8px 22px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #fff;
+    background-color: var(--brick);
+    border: none;
+    cursor: pointer;
+}
+
+.checkout button:hover {
+    background-color: var(--brick-dark);
+}
+
+/* ---------- Login and registration ---------- */
+
+.form-box {
+    width: 400px;
+    margin: 20px auto;
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+}
+
+.form-box h2 {
+    margin: 0;
+    padding: 10px 18px;
+    font-size: 18px;
+    color: #f3ecd8;
+    background-color: var(--green);
+}
+
+.form-box form {
+    padding: 12px 18px 18px;
+}
+
+.form-box table {
+    width: 100%;
+}
+
+.form-box td {
+    padding: 6px 4px;
+    vertical-align: top;
+}
+
+.form-box td:first-child {
+    width: 38%;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="date"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4px 6px;
+    font-family: inherit;
+    font-size: 12px;
+    border: 1px solid #b9ae92;
+    background-color: #fff;
+}
+
+.form-box input:focus {
+    outline: 2px solid #e0b9a4;
+    border-color: var(--brick);
+}
+
+.form-box .sex {
+    margin-right: 10px;
+}
+
+.form-box input[type="submit"],
+.form-box input[type="reset"] {
+    margin: 8px 6px 0 0;
+    padding: 6px 16px;
+    font-family: inherit;
+    font-size: 12px;
+    color: #fff;
+    background-color: var(--green);
+    border: none;
+    cursor: pointer;
+}
+
+.form-box input[type="reset"] {
+    background-color: #8a8272;
+}
+
+.form-box input[type="submit"]:hover {
+    background-color: var(--green-dark);
+}
+
+.form-box input[type="reset"]:hover {
+    background-color: #6b6355;
+}

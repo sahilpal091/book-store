@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            background-color: #22443a;
+        }
+
+        .page {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            grid-template-rows: 110px 1fr;
+            height: 100vh;
+        }
+
+        .page iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .page .header-frame {
+            grid-column: 1 / 3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+
+        <iframe class="header-frame" src="top.html" name="header" title="Header"></iframe>
+
+        <iframe src="home.html" name="content" title="Content"></iframe>
+
+        <iframe src="left.html" name="menu" title="Categories"></iframe>
+
+    </div>
+
+</body>
+</html>
